@@ -28,7 +28,6 @@ export default function Movie() {
   const getMovieData = async (cachedMovieCondition) => {
     setLoading(true);
     const result = await moviesAPI.getMovies({ i: movieID, plot: "full" });
-    console.log(result, "thisssisi");
     if (!result["Title"]) {
       setLoading(false);
       setError(true);
@@ -47,7 +46,6 @@ export default function Movie() {
   };
 
   useEffect(() => {
-    console.log("running");
     if (!router.isReady) return;
     const cachedMovieCondition =
       moviesData.length > 0 &&

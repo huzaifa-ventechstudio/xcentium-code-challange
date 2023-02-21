@@ -1,0 +1,107 @@
+.movieContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .body {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: #505050;
+        padding: 10px;
+        border-radius: 20px;
+        -webkit-box-shadow: -1px 4px 78px -28px rgba(255,255,255,1);
+        -moz-box-shadow: -1px 4px 78px -28px rgba(255,255,255,1);
+        box-shadow: -1px 4px 78px -28px rgba(255,255,255,1);
+        
+        .top {
+      
+          flex: 1;
+          background-color: black;
+          position: relative;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          border-radius: 20px;
+        }
+      
+        .bottom {
+          width: 100%;
+          padding: 5px;
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .header {
+            color: whitesmoke;
+            border-radius: 16px;
+            margin: 0;
+
+            
+          }
+
+          .header + p {
+            margin: 5px 0;
+            
+          }
+
+
+
+          .mainDetailsContainer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            p{
+                width: 49%;
+                margin: 5px 0;
+                &:nth-child(odd){
+                    margin-right: 2%;
+                }
+
+                b {
+                    margin-right: 5px;
+                }
+            }
+          }
+
+          
+        }
+      }
+}
+
+@media only screen and (max-width: 800px) {
+    .movieContainer {
+        .body {
+            flex-direction: column;
+            .top{
+                flex: auto;
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .movieContainer {
+        .body {
+            .bottom{
+                .header{
+                    font-size: 22px;
+                }
+                .mainDetailsContainer{ 
+                    p{
+                        width: 100%;
+                        &:nth-child(odd){
+                            margin-right: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+  

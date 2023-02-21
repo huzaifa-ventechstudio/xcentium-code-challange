@@ -1,0 +1,32 @@
+.body {
+  width: 275px;
+  margin: 0px 10px 30px 10px;
+  border: 1px solid #dbd034;
+  transition: transform .5s;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.05);
+  }
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom:1px solid #dbd034 ;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 5px;
+
+    h4{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 5px;
+      
+    }
+  }
+}
